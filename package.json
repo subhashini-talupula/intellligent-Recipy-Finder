@@ -1,0 +1,30 @@
+{
+  "name": "smartchef-fullstack",
+  "version": "1.0.0",
+  "description": "SmartChef - Full Stack Recipe Finder and Meal Planner Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:client\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:client\"",
+    "start:backend": "cd backend && npm start",
+    "start:client": "cd client && npm run build && npm run preview",
+    "install:all": "npm install && cd backend && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "test:api": "cd backend && node ../client/src/utils/apiTest.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "recipe",
+    "cooking",
+    "meal-planner",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "SmartChef Team",
+  "license": "MIT"
+}
